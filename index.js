@@ -25,11 +25,13 @@ const changeColors = {
       document.body.style.background =
         colors[randomIntegerFromInterval(0, colors.length - 1)];
     }, 1000);
+    pressStart.disabled = this.isActive;
   },
 
   stop() {
     clearInterval(this.intervalId);
     this.isActive = false;
+    pressStart.disabled = this.isActive;
   },
 };
 
